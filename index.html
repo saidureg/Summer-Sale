@@ -33,6 +33,11 @@
         .font-work-sans {
             font-family: 'Work Sans', sans-serif;
         }
+
+        .disable-button[disabled] {
+            background-color: rgba(229, 39, 178, 0.6);
+            cursor: not-allowed;
+        }
     </style>
 
 </head>
@@ -63,7 +68,7 @@
                     <h1 class="text-text-color font-semibold text-4xl mb-7 lg:mb-12">Kitchenware</h1>
                     <div class="grid gap-6 grid-cols-1 lg:grid-cols-3">
                         <!-- first card -->
-                        <div class="card w-80 bg-base-100 shadow-xl">
+                        <div onclick="clickOnCard(this)" class="card w-80 bg-base-100 shadow-xl">
                             <figure class="px-20 py-8 bg-text-color/5 m-5">
                                 <img src="./images/prod1.png" alt="K. Accessories" class="rounded-xl" />
                             </figure>
@@ -82,7 +87,7 @@
                             </div>
                         </div>
                         <!-- second card -->
-                        <div class="card w-80 bg-base-100 shadow-xl">
+                        <div onclick="clickOnCard(this)" class="card w-80 bg-base-100 shadow-xl">
                             <figure class="px-20 py-10 bg-text-color/5 m-5">
                                 <img src="./images/prod2.png" alt="K. Accessories" class="rounded-xl" />
                             </figure>
@@ -101,7 +106,7 @@
                             </div>
                         </div>
                         <!-- third card -->
-                        <div class="card w-80 bg-base-100 shadow-xl">
+                        <div onclick="clickOnCard(this)" class="card w-80 bg-base-100 shadow-xl">
                             <figure class="px-20 py-10 bg-text-color/5 m-5">
                                 <img src="./images/prod3.png" alt="K. Accessories" class="rounded-xl" />
                             </figure>
@@ -126,7 +131,7 @@
                     <h1 class="text-text-color font-semibold text-4xl mb-7 lg:mb-12">Sportswear</h1>
                     <div class="grid gap-6 grid-cols-1 lg:grid-cols-3">
                         <!-- fourth card -->
-                        <div class="card w-80 bg-base-100 shadow-xl">
+                        <div onclick="clickOnCard(this)" class="card w-80 bg-base-100 shadow-xl">
                             <figure class="px-20 py-12 bg-text-color/5 m-5">
                                 <img src="./images/prod4.png" alt="Sports Back Cap" class="rounded-xl" />
                             </figure>
@@ -145,7 +150,7 @@
                             </div>
                         </div>
                         <!-- fifth card -->
-                        <div class="card w-80 bg-base-100 shadow-xl">
+                        <div onclick="clickOnCard(this)" class="card w-80 bg-base-100 shadow-xl">
                             <figure class="px-20 py-6 bg-text-color/5 m-5">
                                 <img src="./images/prod5.png" alt="Full Jersey Set" class="rounded-xl" />
                             </figure>
@@ -164,7 +169,7 @@
                             </div>
                         </div>
                         <!-- sixth card -->
-                        <div class="card w-80 bg-base-100 shadow-xl">
+                        <div onclick="clickOnCard(this)" class="card w-80 bg-base-100 shadow-xl">
                             <figure class="px-20 pb-8 pt-10 bg-text-color/5 m-5">
                                 <img src="./images/prod6.png" alt="Sports cates" class="rounded-xl" />
                             </figure>
@@ -193,19 +198,16 @@
                         <div class="flex relative">
                             <input class="border-primary-color w-full border rounded-lg px-2 h-12" type="text"
                                 placeholder="Coupon code">
-                            <button
-                                class="py-3 px-6 bg-primary-color text-white font-semibold absolute right-0 rounded-r-lg">Apply</button>
+                            <button class="disable-button py-3 px-6 bg-primary-color text-white font-semibold absolute right-0 rounded-r-lg" disabled>Apply</button>
                         </div>
                     </div>
                 </div>
                 <!-- calculation card -->
                 <div class="card w-80 bg-base-100 shadow-xl my-6">
                     <div class="card-body pt-6 pb-20 relative divide-y divide-primary-color">
-                        <div class="text-text-color text-xl font-medium">
-                            <li>Home Cooker</li>
-                            <li>Home Cooker</li>
-                            <li>Home Cooker</li>
-
+                        <!-- text added empty div -->
+                        <div id="selected-text" class="text-text-color text-xl font-semibold">
+                            <ol id="selected-item-list" class="list-decimal ml-7"></ol>
                         </div>
                         <div class="py-5">
                             <p class="card-title text-text-color text-xl">Total price: <span
@@ -216,9 +218,8 @@
                                     class="text-primary-color">00TK</span></p>
                         </div>
                         <div class="flex">
-                            <!-- <button class=""></button> -->
                             <!-- Open the modal using ID.showModal() method -->
-                            <button class="mt-14 py-3 px-6 bg-primary-color text-white font-semibold text-xl absolute w-4/5 rounded-lg" onclick="my_modal_1.showModal()">Make
+                            <button class="disable-button mt-12 py-3 px-6 bg-primary-color text-white font-semibold text-xl absolute w-4/5 rounded-lg" onclick="my_modal_1.showModal()" disabled>Make
                                 Purchase</button>
                             <dialog id="my_modal_1" class="modal">
                                 <form method="dialog" class="modal-box text-center lg:pb-16">
@@ -239,6 +240,7 @@
             </div>
         </section>
     </main>
+    <script src="./script/index.js"></script>
 </body>
 
 </html>
