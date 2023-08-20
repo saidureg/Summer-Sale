@@ -189,6 +189,69 @@
                         </div>
                     </div>
                 </div>
+                <!-- Furniture section -->
+                <div class="mt-12">
+                    <h1 class="text-text-color font-semibold text-4xl mb-7 lg:mb-12">Furniture</h1>
+                    <div class="grid gap-6 grid-cols-1 lg:grid-cols-3">
+                        <!-- seventh card -->
+                        <div onclick="clickOnCard(this)" class="card w-80 bg-base-100 shadow-xl">
+                            <figure class="px-20 py-10 bg-text-color/5 m-5">
+                                <img src="./images/prod7.png" alt="Single Relax Chair" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400"
+                                        />
+                                    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <h2 class="card-title text-text-color">Single Relax Chair</h2>
+                                <p class="text-text-color/50 text-xl">185.00 TK</p>
+
+                            </div>
+                        </div>
+                        <!-- eighth card -->
+                        <div onclick="clickOnCard(this)" class="card w-80 bg-base-100 shadow-xl">
+                            <figure class="px-20 pt-7 pb-8 bg-text-color/5 m-5">
+                                <img src="./images/prod8.png" alt="Children play" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400"
+                                        />
+                                    <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" checked />
+                                </div>
+                                <h2 class="card-title text-text-color">Children play</h2>
+                                <p class="text-text-color/50 text-xl">229.00 TK</p>
+
+                            </div>
+                        </div>
+                        <!-- ninth card -->
+                        <div onclick="clickOnCard(this)" class="card w-80 bg-base-100 shadow-xl">
+                            <figure class="px-20 py-12 bg-text-color/5 m-5">
+                                <img src="./images/prod9.png" alt="Flexible Sofa" class="rounded-xl" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400"
+                                        />
+                                    <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400" />
+                                </div>
+                                <h2 class="card-title text-text-color">Flexible Sofa</h2>
+                                <p class="text-text-color/50 text-xl">339.00 TK</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="mt-6 md:mt-16 lg:mt-24">
                 <!-- coupon card -->
@@ -204,7 +267,7 @@
                 </div>
                 <!-- calculation card -->
                 <div class="card w-80 bg-base-100 shadow-xl my-6">
-                    <div class="card-body pt-6 pb-20 relative divide-y divide-primary-color">
+                    <div class="card-body pt-6 pb-16 relative divide-y divide-primary-color">
                         <!-- text added empty div -->
                         <div id="selected-text" class="text-text-color text-xl font-semibold">
                             <ol id="selected-item-list" class="list-decimal ml-7"></ol>
@@ -219,7 +282,7 @@
                         </div>
                         <div class="flex">
                             <!-- Open the modal using ID.showModal() method -->
-                            <button id="btn-purchase" class="disable-button mt-12 py-3 px-6 bg-primary-color text-white font-semibold text-xl absolute w-4/5 rounded-lg" onclick="my_modal_1.showModal()" disabled>Make
+                            <button id="btn-purchase" class="disable-button mt-8 py-3 px-6 bg-primary-color text-white font-semibold text-xl absolute w-4/5 rounded-lg" onclick="my_modal_1.showModal()" disabled>Make
                                 Purchase</button>
                             <dialog id="my_modal_1" class="modal">
                                 <form method="dialog" class="modal-box text-center lg:pb-16">
