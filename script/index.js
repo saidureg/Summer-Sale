@@ -48,7 +48,6 @@ function applyButton() {
 
         // calculated the discount price
         const discountPrice = (totalPrice * 20) / 100
-        console.log('Discount:', discountPrice)
 
         // Update the discount price display in the HTML
         const discountPriceDisplay = document.getElementById('discount-price');
