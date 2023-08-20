@@ -196,9 +196,9 @@
                     <div class="card-body">
                         <h2 class="card-title text-text-color text-2xl">Have coupon?</h2>
                         <div class="flex relative">
-                            <input class="border-primary-color w-full border rounded-lg px-2 h-12" type="text"
+                            <input id="input-coupon" class="border-primary-color w-full border rounded-lg px-2 h-12" type="text"
                                 placeholder="Coupon code">
-                            <button class="disable-button py-3 px-6 bg-primary-color text-white font-semibold absolute right-0 rounded-r-lg" disabled>Apply</button>
+                            <button id="btn-apply" onclick="applyButton()" class="disable-button py-3 px-6 bg-primary-color text-white font-semibold absolute right-0 rounded-r-lg" disabled>Apply</button>
                         </div>
                     </div>
                 </div>
@@ -210,16 +210,16 @@
                             <ol id="selected-item-list" class="list-decimal ml-7"></ol>
                         </div>
                         <div class="py-5">
-                            <p class="card-title text-text-color text-xl">Total price: <span
-                                    class="text-primary-color">00TK</span></p>
-                            <p class="card-title text-text-color text-xl">Discount: <span
-                                    class="text-primary-color">00TK</span></p>
-                            <p class="card-title text-text-color text-xl">Total: <span
-                                    class="text-primary-color">00TK</span></p>
+                            <p class="card-title text-text-color text-xl">Total price: <span id="total-price"
+                                    class="text-primary-color">0.00</span></p>
+                            <p class="card-title text-text-color text-xl">Discount: <span id="discount-price"
+                                    class="text-primary-color">0.00</span></p>
+                            <p class="card-title text-text-color text-xl">Total: <span id="total"
+                                    class="text-primary-color">0.00</span></p>
                         </div>
                         <div class="flex">
                             <!-- Open the modal using ID.showModal() method -->
-                            <button class="disable-button mt-12 py-3 px-6 bg-primary-color text-white font-semibold text-xl absolute w-4/5 rounded-lg" onclick="my_modal_1.showModal()" disabled>Make
+                            <button id="btn-purchase" class="disable-button mt-12 py-3 px-6 bg-primary-color text-white font-semibold text-xl absolute w-4/5 rounded-lg" onclick="my_modal_1.showModal()" disabled>Make
                                 Purchase</button>
                             <dialog id="my_modal_1" class="modal">
                                 <form method="dialog" class="modal-box text-center lg:pb-16">
